@@ -1,1 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss";/* Sidebar se scrollbar hide karne ke liye */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

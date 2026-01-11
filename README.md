@@ -84,5 +84,5 @@ Biometric Simulation: Adding a mock Fingerprint/FaceID login flow.
 
 PDF Statements: Functionality to generate and download e-statements.
 
-Developed with ❤️ by [AZ Developer]
+Developed with ❤️ by [AZ Developer's]
 Meezan Bank - The Premier Islamic Bank
