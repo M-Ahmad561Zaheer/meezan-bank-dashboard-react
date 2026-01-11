@@ -101,7 +101,7 @@ const Dashboard = () => {
               <div className="mt-4 flex items-center space-x-3">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
                 <div>
-                  <p className="text-[10px] font-bold opacity-60 uppercase tracking-widest leading-none">Premium Banking</p>
+                  <p className="text-[10px] font-bold text-gray-600 uppercase tracking-widest leading-none">Premium Banking</p>
                   <p className="text-[10px] font-medium opacity-90 mt-1">Gulberg Branch, LHR</p>
                 </div>
               </div>
@@ -203,7 +203,7 @@ const Dashboard = () => {
         <div className="flex items-center space-x-6 mb-6 md:mb-0 w-full md:w-auto">
           <div className="text-4xl md:text-5xl drop-shadow-lg">🕌</div>
           <div>
-            <h4 className="font-black text-[10px] uppercase opacity-60 tracking-widest text-left">Active Prayer</h4>
+            <h4 className="font-black text-[10px] uppercase text-gray-600 tracking-widest text-left">Active Prayer</h4>
             <p className="text-2xl md:text-3xl font-black text-emerald-600 flex items-center">
               {currentPrayer}
               <span className="ml-3 flex h-3 w-3 relative">
@@ -231,7 +231,7 @@ const Dashboard = () => {
         <h4 className="text-[10px] font-black uppercase text-emerald-700 mb-4 tracking-widest">Islamic Reminder</h4>
         <div className={`text-xs md:text-sm font-bold leading-relaxed ${isDarkMode ? 'text-emerald-100' : 'text-emerald-800'}`}>
           {currentPrayer === 'Fajr' ? "Prayer is better than sleep." : "The best of you are those who are best to their families."}
-          <span className="block mt-3 opacity-60 font-medium text-[10px]">— Prophet Muhammad (PBUH)</span>
+          <span className="block mt-3 text-gray-600 font-medium text-[10px]">— Prophet Muhammad (PBUH)</span>
         </div>
       </div>
     </div>
@@ -272,7 +272,7 @@ const Dashboard = () => {
       <div className="p-6 md:p-8 border-b flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-gray-50/50 dark:bg-gray-900/50">
         <div>
           <span className="font-black text-xs uppercase opacity-60 tracking-widest">Recent Activity</span>
-          <p className="text-[10px] font-bold text-gray-400 italic mt-1">Real-time settlement</p>
+          <p className="text-[10px] font-bold text-gray-600 italic mt-1">Real-time settlement</p>
         </div>
         <button className="bg-[#006837] text-white px-6 py-2 rounded-xl text-[10px] font-black uppercase shadow-lg shadow-green-900/20 active:scale-95 transition-all">View All</button>
       </div>
@@ -320,14 +320,14 @@ const Dashboard = () => {
           <button 
             type="button" 
             onClick={() => setTransferType('meezan')}
-            className={`py-4 rounded-[20px] font-black text-[10px] md:text-xs uppercase tracking-widest transition-all ${transferType === 'meezan' ? 'bg-[#006837] text-white shadow-xl scale-100' : 'text-gray-400 hover:text-gray-500'}`}
+            className={`py-4 rounded-[20px] font-black text-[10px] md:text-xs uppercase tracking-widest transition-all ${transferType === 'meezan' ? 'bg-[#006837] text-white shadow-xl scale-100' : 'text-gray-600 hover:text-gray-500'}`}
           >
             Meezan
           </button>
           <button 
             type="button" 
             onClick={() => setTransferType('other')}
-            className={`py-4 rounded-[20px] font-black text-[10px] md:text-xs uppercase tracking-widest transition-all ${transferType === 'other' ? 'bg-[#006837] text-white shadow-xl scale-100' : 'text-gray-400 hover:text-gray-500'}`}
+            className={`py-4 rounded-[20px] font-black text-[10px] md:text-xs uppercase tracking-widest transition-all ${transferType === 'other' ? 'bg-[#006837] text-white shadow-xl scale-100' : 'text-gray-600 hover:text-gray-500'}`}
           >
             Other Banks
           </button>
@@ -380,7 +380,7 @@ const Dashboard = () => {
 
           {/* PURPOSE & REFERENCE (Grid for Tablet/Desktop) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select className={`p-5 rounded-[25px] border-none outline-none focus:ring-4 focus:ring-[#006837]/20 font-bold text-xs md:text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-gray-400' : 'bg-gray-50 text-gray-500'}`}>
+            <select className={`p-5 rounded-[25px] border-none outline-none focus:ring-4 focus:ring-[#006837]/20 font-bold text-xs md:text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-gray-600' : 'bg-gray-50 text-gray-500'}`}>
               <option>Purpose: Family Support</option>
               <option>Purpose: Education / Fees</option>
               <option>Purpose: Business Utility</option>
@@ -426,16 +426,16 @@ const Dashboard = () => {
       <div className={`p-6 md:p-10 rounded-[35px] md:rounded-[45px] shadow-2xl h-fit border-t-8 border-[#006837] transition-all ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-white'}`}>
         <div className="flex items-center space-x-3 mb-8">
           <span className="text-2xl">📝</span>
-          <h3 className="font-black text-xs md:text-sm uppercase opacity-60 tracking-[3px]">New Application</h3>
+          <h3 className="font-black text-xs md:text-sm uppercase opacity-80 tracking-[3px]">New Application</h3>
         </div>
 
         <form onSubmit={handleLoanSubmit} className="space-y-5">
           <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase opacity-40 ml-2 tracking-widest">Select Product</label>
+            <label className="text-[10px] font-black uppercase opacity-80 ml-2 tracking-widest">Select Product</label>
             <select 
               value={loanForm.type} 
               onChange={(e) => setLoanForm({...loanForm, type: e.target.value})} 
-              className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-[#006837]/20 font-bold text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-gray-400' : 'bg-gray-50 text-gray-600'}`}
+              className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-[#006837]/20 font-bold text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-gray-600' : 'bg-gray-50 text-gray-600'}`}
             >
               <option>Car Ijarah</option>
               <option>Easy Home</option>
@@ -445,7 +445,7 @@ const Dashboard = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase opacity-40 ml-2 tracking-widest">Financing Amount</label>
+            <label className="text-[10px] font-black uppercase opacity-80 ml-2 tracking-widest">Financing Amount</label>
             <div className="relative">
               <input 
                 type="number" 
@@ -455,7 +455,7 @@ const Dashboard = () => {
                 className={`w-full p-5 pl-12 rounded-2xl border-none outline-none focus:ring-4 focus:ring-[#006837]/20 font-black text-lg ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50'}`} 
                 required
               />
-              <span className="absolute left-5 top-1/2 -translate-y-1/2 opacity-30 font-bold">Rs</span>
+              <span className="absolute left-5 top-1/2 -translate-y-1/2 opacity-80 font-bold">Rs</span>
             </div>
           </div>
 
@@ -474,7 +474,7 @@ const Dashboard = () => {
           <div className="flex justify-between items-center mb-8 px-2">
             <div className="flex items-center space-x-3">
               <span className="text-2xl">📊</span>
-              <h3 className="font-black text-xs md:text-sm uppercase opacity-60 tracking-[3px]">Active Portfolio</h3>
+              <h3 className="font-black text-xs md:text-sm uppercase opacity-80 tracking-[3px]">Active Portfolio</h3>
             </div>
             <div className="text-[10px] font-black bg-yellow-500/10 text-yellow-600 px-3 py-1 rounded-full uppercase">
               Shariah Verified
@@ -484,7 +484,7 @@ const Dashboard = () => {
           <div className="overflow-x-auto no-scrollbar">
             <table className="w-full text-left min-w-[500px]">
               <thead>
-                <tr className="opacity-30 border-b dark:border-gray-700 text-[10px] uppercase font-black tracking-widest">
+                <tr className="opacity-80 border-b dark:border-gray-700 text-[10px] uppercase font-black tracking-widest">
                   <th className="pb-5 px-4">Financing Type</th>
                   <th className="pb-5 px-4">Remaining Balance</th>
                   <th className="pb-5 px-4 text-right">Current Status</th>
@@ -494,12 +494,12 @@ const Dashboard = () => {
                 {loans.map(loan => (
                   <tr key={loan.id} className="group hover:bg-gray-50/50 dark:hover:bg-gray-900/30 transition-all">
                     <td className="py-6 px-4">
-                      <p className="font-black text-sm md:text-base text-gray-800 dark:text-gray-100">{loan.type}</p>
-                      <p className="text-[9px] font-bold opacity-40 uppercase tracking-tighter">ID: #{loan.id.toString().slice(-5)}</p>
+                      <p className="font-black text-sm md:text-base text-gray-600 dark:text-gray-600">{loan.type}</p>
+                      <p className="text-[9px] font-bold opacity-80 uppercase tracking-tighter">ID: #{loan.id.toString().slice(-5)}</p>
                     </td>
                     <td className="py-6 px-4">
                       <div className="flex items-baseline space-x-1">
-                        <span className="text-[10px] font-bold opacity-30">PKR</span>
+                        <span className="text-[10px] font-bold opacity-80">PKR</span>
                         <span className="font-mono font-black text-base md:text-lg">
                           {Number(loan.remaining).toLocaleString()}
                         </span>
@@ -521,7 +521,7 @@ const Dashboard = () => {
           
           {/* Empty State if no loans */}
           {loans.length === 0 && (
-            <div className="py-20 text-center opacity-30">
+            <div className="py-20 text-center opacity-80">
               <p className="text-4xl mb-4">📭</p>
               <p className="font-black uppercase text-xs tracking-widest">No active financing found</p>
             </div>
@@ -541,7 +541,7 @@ const Dashboard = () => {
           <span className="text-3xl md:text-4xl">🌙</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-black uppercase italic tracking-tighter text-[#006837] dark:text-green-500">Zakat Portal</h2>
-        <p className="text-[10px] md:text-xs opacity-60 mt-2 font-bold italic tracking-wide leading-relaxed px-4">
+        <p className="text-[10px] md:text-xs opacity-80 mt-2 font-bold italic tracking-wide leading-relaxed px-4">
           "Establish prayer and give zakat..." <br className="hidden md:block"/> (Al-Baqarah 2:110)
         </p>
       </div>
@@ -549,24 +549,24 @@ const Dashboard = () => {
       {/* Nisab Info Card */}
       <div className={`mb-10 p-5 rounded-3xl border-2 border-dashed flex items-center justify-between transition-colors ${isDarkMode ? 'border-gray-700 bg-gray-900/50' : 'border-green-100 bg-green-50/30'}`}>
         <div className="text-left">
-          <p className="text-[10px] font-black uppercase opacity-40 tracking-widest mb-1">Current Nisab (Silver)</p>
-          <p className={`text-sm md:text-base font-black ${isDarkMode ? 'text-green-400' : 'text-green-700'}`}>PKR 155,000 <span className="text-[10px] opacity-50 italic">approx.</span></p>
+          <p className="text-[10px] font-black uppercase opacity-80 tracking-widest mb-1">Current Nisab (Silver)</p>
+          <p className={`text-sm md:text-base font-black ${isDarkMode ? 'text-green-400' : 'text-green-700'}`}>PKR 155,000 <span className="text-[10px] opacity-80 italic">approx.</span></p>
         </div>
         <div className="bg-yellow-400/20 p-2 rounded-xl">✨</div>
       </div>
 
       <div className="space-y-8">
         <div className="group">
-          <label className="text-[10px] font-black uppercase opacity-40 ml-5 mb-3 block tracking-[2px]">Total Zakatable Wealth</label>
+          <label className="text-[10px] font-black uppercase opacity-80 ml-5 mb-3 block tracking-[2px]">Total Zakatable Wealth</label>
           <div className="relative">
             <input 
               type="number" 
               value={wealth} 
               onChange={(e) => setWealth(e.target.value)} 
               placeholder="0.00" 
-              className={`w-full p-6 md:p-8 rounded-[30px] text-center text-2xl md:text-4xl font-black transition-all focus:ring-8 focus:ring-green-500/10 outline-none shadow-inner ${isDarkMode ? 'bg-gray-900 border-gray-700 text-white placeholder-gray-800' : 'bg-gray-50 border-none text-gray-800 placeholder-gray-200'}`} 
+              className={`w-full p-6 md:p-8 rounded-[30px] text-center text-2xl md:text-4xl font-black transition-all focus:ring-8 focus:ring-green-500/10 outline-none shadow-inner ${isDarkMode ? 'bg-gray-900 border-gray-700 text-white placeholder-gray-800' : 'bg-gray-50 border-none text-gray-600 placeholder-gray-200'}`} 
             />
-            <span className="absolute left-6 top-1/2 -translate-y-1/2 opacity-20 font-black hidden md:block">PKR</span>
+            <span className="absolute left-6 top-1/2 -translate-y-1/2 opacity-80 font-black hidden md:block">PKR</span>
           </div>
         </div>
 
@@ -581,7 +581,7 @@ const Dashboard = () => {
         {zakatResult > 0 && (
           <div className="mt-10 animate-in slide-in-from-top-6 duration-700">
             <div className={`p-8 rounded-[35px] text-center border-4 border-double shadow-inner ${isDarkMode ? 'bg-green-950/20 border-green-900/50' : 'bg-green-50/50 border-green-100'}`}>
-              <p className={`text-[10px] md:text-xs font-black uppercase tracking-[3px] mb-2 opacity-60 ${isDarkMode ? 'text-green-100' : 'text-green-800'}`}>Your Zakat Obligation</p>
+              <p className={`text-[10px] md:text-xs font-black uppercase tracking-[3px] mb-2 opacity-80 ${isDarkMode ? 'text-green-100' : 'text-green-800'}`}>Your Zakat Obligation</p>
               <h3 className="text-3xl md:text-5xl font-black text-green-600 font-mono tracking-tighter">
                 PKR {zakatResult.toLocaleString()}
               </h3>
@@ -589,8 +589,8 @@ const Dashboard = () => {
               <div className="mt-10 pt-8 border-t border-dashed border-green-500/20">
                 <p className="text-[9px] md:text-[10px] mb-5 opacity-50 uppercase font-black tracking-[4px]">Verified Zakat Recipients</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <button onClick={() => alert('Redirecting to Indus Hospital...')} className={`py-4 px-2 text-[9px] md:text-[10px] font-black rounded-2xl shadow-sm border-2 transition-all active:scale-95 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700' : 'bg-white text-gray-800 border-gray-50 hover:border-green-200'}`}>INDUS HOSPITAL</button>
-                  <button onClick={() => alert('Redirecting to Edhi Foundation...')} className={`py-4 px-2 text-[9px] md:text-[10px] font-black rounded-2xl shadow-sm border-2 transition-all active:scale-95 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700' : 'bg-white text-gray-800 border-gray-50 hover:border-green-200'}`}>EDHI FOUNDATION</button>
+                  <button onClick={() => alert('Redirecting to Indus Hospital...')} className={`py-4 px-2 text-[9px] md:text-[10px] font-black rounded-2xl shadow-sm border-2 transition-all active:scale-95 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700' : 'bg-white text-gray-600 border-gray-100 hover:border-green-200'}`}>INDUS HOSPITAL</button>
+                  <button onClick={() => alert('Redirecting to Edhi Foundation...')} className={`py-4 px-2 text-[9px] md:text-[10px] font-black rounded-2xl shadow-sm border-2 transition-all active:scale-95 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white hover:bg-gray-700' : 'bg-white text-gray-600 border-gray-100 hover:border-green-200'}`}>EDHI FOUNDATION</button>
                 </div>
               </div>
             </div>
@@ -627,7 +627,7 @@ const Dashboard = () => {
           <div className={`text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300`}>
             {item.icon}
           </div>
-          <p className="text-[10px] md:text-xs font-black uppercase opacity-60 tracking-widest">{item.id}</p>
+          <p className="text-[10px] md:text-xs font-black uppercase text-gray-600 tracking-widest">{item.id}</p>
         </div>
       ))}
     </div>
@@ -637,9 +637,9 @@ const Dashboard = () => {
       <form className="space-y-6 md:space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase opacity-40 ml-4 tracking-widest">Company / Provider</label>
+            <label className="text-[10px] font-black uppercase ocpaity-40 ml-4 tracking-widest">Company / Provider</label>
             <div className="relative">
-              <select className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-green-500/20 font-bold text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-700'}`}>
+              <select className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-green-500/20 font-bold text-sm appearance-none cursor-pointer ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-600'}`}>
                 <option>Select Company</option>
                 <option>LESCO - Electricity</option>
                 <option>SNGPL - Gas</option>
@@ -657,7 +657,7 @@ const Dashboard = () => {
               <input 
                 type="text" 
                 placeholder="Enter Reference No." 
-                className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-green-500/20 font-bold text-sm ${isDarkMode ? 'bg-gray-900 text-white placeholder-gray-700' : 'bg-gray-50 text-gray-800'}`} 
+                className={`w-full p-5 rounded-2xl border-none outline-none focus:ring-4 focus:ring-green-500/20 font-bold text-sm ${isDarkMode ? 'bg-gray-900 text-white placeholder-gray-700' : 'bg-gray-50 text-gray-600'}`} 
               />
               <span className="absolute right-5 top-1/2 -translate-y-1/2 opacity-30 cursor-help" title="Check your bill for reference ID">❓</span>
             </div>
@@ -718,11 +718,11 @@ const Dashboard = () => {
 
             <div className="flex justify-between items-end">
               <div>
-                <p className="text-[8px] opacity-60 uppercase font-black tracking-widest">Card Holder</p>
+                <p className="text-[8px] text-gray-600 uppercase font-black tracking-widest">Card Holder</p>
                 <p className="text-sm font-bold tracking-[2px] uppercase">AHMAD</p>
               </div>
               <div className="text-right">
-                <p className="text-[8px] opacity-60 uppercase font-black tracking-widest">Expires</p>
+                <p className="text-[8px] text-gray-600 uppercase font-black tracking-widest">Expires</p>
                 <p className="text-sm font-bold font-mono">{card.expiry}</p>
               </div>
               {/* Visa/Mastercard Logo Placeholder */}
@@ -792,7 +792,7 @@ const Dashboard = () => {
           <input
             type="text"
             placeholder="Search transactions..."
-            className={`w-full p-4 pl-12 rounded-2xl border-none outline-none font-bold text-xs md:text-sm shadow-inner ${isDarkMode ? 'bg-gray-900 text-white placeholder-gray-700' : 'bg-gray-50 text-gray-800'}`}
+            className={`w-full p-4 pl-12 rounded-2xl border-none outline-none font-bold text-xs md:text-sm shadow-inner ${isDarkMode ? 'bg-gray-900 text-white placeholder-gray-700' : 'bg-gray-50 text-gray-600'}`}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
@@ -817,7 +817,7 @@ const Dashboard = () => {
     <div className={`rounded-[35px] md:rounded-[45px] shadow-2xl overflow-hidden border-b-8 border-[#006837] ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-white'}`}>
       <div className="overflow-x-auto no-scrollbar">
         <table className="w-full text-left min-w-[600px]">
-          <thead className={`text-[10px] uppercase font-black tracking-[3px] ${isDarkMode ? 'bg-gray-900/50 text-gray-500' : 'bg-gray-50 text-gray-400'}`}>
+          <thead className={`text-[10px] uppercase font-black tracking-[3px] ${isDarkMode ? 'bg-gray-900/50 text-gray-600' : 'bg-gray-50 text-gray-600'}`}>
             <tr>
               <th className="p-6 text-center">Date</th>
               <th className="p-6">Transaction Detail</th>
