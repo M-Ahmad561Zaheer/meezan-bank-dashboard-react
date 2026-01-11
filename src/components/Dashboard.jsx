@@ -145,11 +145,14 @@ const Dashboard = () => {
     {/* MAIN AREA START */}
         <main className="flex-1 h-full overflow-y-auto">
           {/* MOBILE TOP BAR */}
-          <div className="lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 bg-inherit border-b dark:border-gray-800">
-            <button onClick={() => setIsSidebarOpen(true)} className="text-2xl">☰</button>
-           <div className="text-lg md:text-2xl font-black italic text-[#006837] dark:text-white tracking-tighter leading-none">
-  MEEZAN
-</div>
+         <div className={`lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 border-b transition-colors duration-300 
+  ${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-100'}`}>
+           <button onClick={() => setIsSidebarOpen(true)} className={`text-2xl ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+    ☰
+  </button>
+           <div className="text-xl font-black italic tracking-tighter leading-none text-[#006837] dark:text-white">
+    MEEZAN
+  </div>
             <img src={`https://ui-avatars.com/api/?name=Ahmad&background=006837&color=fff`} className="w-8 h-8 rounded-full" alt="profile" />
           </div>
           
