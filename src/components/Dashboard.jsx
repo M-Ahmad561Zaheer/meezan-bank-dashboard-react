@@ -150,7 +150,7 @@ const Dashboard = () => {
           <button onClick={() => setIsSidebarOpen(true)} className="p-2">
     <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>☰</span>
   </button>
-          <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none !text-black dark:!text-white">
+          <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none text-black! dark:!text-white">
     Meezan Bank
   </div>
   <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 text-xl">
