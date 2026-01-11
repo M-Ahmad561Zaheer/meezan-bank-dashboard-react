@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="icon" type="image/png" href="/src/assets/logo Favicon.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meezan Bank | Internet Banking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+      }
+
+      /* LOADING SCREEN STYLE (Optional but looks Pro) */
+      #loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #006837;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+
+      .logo-container {
+        width: 120px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <div class="logo-container">
+        <img src="/src/assets/id9zCpyR_P_logos.png" alt="Meezan Logo">
+      </div>
+      <p style="color: white; margin-top: 20px; font-size: 10px; letter-spacing: 2px; font-weight: bold; opacity: 0.7;">
+        SECURE ISLAMIC BANKING
+      </p>
+    </div>
+
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      // Loader ko hide karne ka script jab React load ho jaye
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          setTimeout(() => loader.style.display = 'none', 500);
+        }, 1000); // 1 second ka stay takay logo nazar aaye
+      });
+    </script>
+  </body>
+</html>
