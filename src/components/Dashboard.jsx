@@ -143,29 +143,21 @@ const Dashboard = () => {
         </aside>
 
     {/* MAIN AREA START */}
-        <main className={`flex-1 h-full overflow-y-auto ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
-        {/* MOBILE TOP BAR */}
-<div className={`lg:hidden p-4 flex justify-between items-center sticky top-0 z-50 border-b transition-all duration-300 
+        <main className="flex-1 h-full overflow-y-auto">
+          {/* MOBILE TOP BAR */}
+         <div className={`lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 border-b transition-all duration-300 
   ${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
-  
-  <div className="flex items-center gap-2">
-    <button onClick={() => setIsSidebarOpen(true)} className="p-1">
-      <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>☰</span>
-    </button>
-    
-    {/* Explicit color with !important */}
-    <div className="text-xl font-black italic tracking-tighter leading-none !text-[#006837] dark:!text-white">
-      Meezan Bank
-    </div>
-  </div>
-
-  <div className="flex items-center gap-3">
-    <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 text-xl hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
-      {isDarkMode ? '☀️' : '🌙'}
-    </button>
-    <img src={`https://ui-avatars.com/api/?name=Ahmad&background=006837&color=fff`} className="w-8 h-8 rounded-full border border-gray-200" alt="profile" />
-  </div>
+          <button onClick={() => setIsSidebarOpen(true)} className="p-2">
+    <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>☰</span>
+  </button>
+         <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none !text-[#006837] dark:!text-white">
+  Meezan Bank
 </div>
+  <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 text-xl">
+    {isDarkMode ? '☀️' : '🌙'}
+  </button>
+            <img src={`https://ui-avatars.com/api/?name=Ahmad&background=006837&color=fff`} className="w-8 h-8 rounded-full" alt="profile" />
+          </div>
           
       <div className="p-4 md:p-10 max-w-7xl mx-auto">
               
