@@ -148,11 +148,11 @@ const Dashboard = () => {
          <div className={`lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 border-b transition-all duration-300 
   ${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
           <button onClick={() => setIsSidebarOpen(true)} className="p-2">
-    <span className={`text-2xl ${isDarkMode ? 'text-black' : 'text-black'}`}>☰</span>
+    <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>☰</span>
   </button>
-          <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none text-black! dark:!text-white">
-    Meezan Bank
-  </div>
+          <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none !text-[#006837] dark:!text-white">
+  Meezan Bank
+</div>
   <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 text-xl">
     {isDarkMode ? '☀️' : '🌙'}
   </button>
