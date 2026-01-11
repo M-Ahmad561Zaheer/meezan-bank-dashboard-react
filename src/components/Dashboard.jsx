@@ -101,7 +101,7 @@ const Dashboard = () => {
               <div className="mt-4 flex items-center space-x-3">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
                 <div>
-                  <p className="text-[10px] font-bold text-gray-600 uppercase tracking-widest leading-none">Premium Banking</p>
+                  <p className="text-[10px] font-bold text-gray-800 uppercase tracking-widest leading-none">Premium Banking</p>
                   <p className="text-[10px] font-medium opacity-90 mt-1">Gulberg Branch, LHR</p>
                 </div>
               </div>
@@ -147,7 +147,9 @@ const Dashboard = () => {
           {/* MOBILE TOP BAR */}
           <div className="lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 bg-inherit border-b dark:border-gray-800">
             <button onClick={() => setIsSidebarOpen(true)} className="text-2xl">☰</button>
-            <div className="text-lg font-black italic text-[#006837] dark:text-white">MEEZAN</div>
+           <div className="text-lg md:text-2xl font-black italic text-[#006837] dark:text-white tracking-tighter leading-none">
+  MEEZAN
+</div>
             <img src={`https://ui-avatars.com/api/?name=Ahmad&background=006837&color=fff`} className="w-8 h-8 rounded-full" alt="profile" />
           </div>
           
