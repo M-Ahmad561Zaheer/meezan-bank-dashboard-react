@@ -133,9 +133,9 @@ const Dashboard = () => {
 
           {/* BOTTOM CONTROLS */}
           <div className="p-6 border-t border-white/10 space-y-3">
-            <button onClick={() => setIsDarkMode(!isDarkMode)} className="w-full py-2 bg-white/10 rounded-xl text-xs transition-colors hover:bg-white/20">
+            {/*<button onClick={() => setIsDarkMode(!isDarkMode)} className="w-full py-2 bg-white/10 rounded-xl text-xs transition-colors hover:bg-white/20">
               {isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-            </button>
+            </button>*/}
             <button onClick={() => navigate('/login')} className="w-full py-3 bg-red-600 rounded-xl font-bold transition-transform active:scale-95">
               Logout
             </button>
@@ -148,7 +148,7 @@ const Dashboard = () => {
          <div className={`lg:hidden p-4 flex justify-between items-center sticky top-0 z-40 border-b transition-all duration-300 
   ${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
           <button onClick={() => setIsSidebarOpen(true)} className="p-2">
-    <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>☰</span>
+    <span className={`text-2xl ${isDarkMode ? 'text-black' : 'text-black'}`}>☰</span>
   </button>
           <div className="text-xl md:text-2xl font-black italic tracking-tighter leading-none text-black! dark:!text-white">
     Meezan Bank
